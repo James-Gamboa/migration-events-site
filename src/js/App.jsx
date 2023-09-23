@@ -7,8 +7,8 @@ const App = () => {
   return (
     <>
       <Header />
-      <MainContent />
       <Tabs/>
+      <MainContent />
     </>
   );
 };

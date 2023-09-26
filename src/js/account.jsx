@@ -1,18 +1,17 @@
-// import { createRoot } from "react-dom/client";
-// import { Header } from "./components/react/Header";
-// import { MainContent } from "./components/react/MainContent";
-// import { Tabs } from "./components/react/Tabs";
+ import { createRoot } from "react-dom/client";
+ import { HeaderAccount } from "./components/react/HeaderAccount";
+ import { MainContentAccount } from "./components/react/MainContentAccount";
 
-// const Account = () => {
-//   return (
-//     <>
-//       <Header />
-//       <MainContent />
-//       <Tabs/>
-//     </>
-//   );
-// };
+ const Account = () => {
+   return (
+     <>
+       <HeaderAccount />
+       <MainContentAccount />
+      
+     </>
+   );
+ };
 
-// const container = document.getElementById("root2");
-// const root = createRoot(container);
-// root.render(<Account />);
+ const container = document.getElementById("root2");
+ const root = createRoot(container);
+ root.render(<Account />);

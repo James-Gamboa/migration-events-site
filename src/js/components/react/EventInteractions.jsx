@@ -31,14 +31,14 @@ const EventsInteractions = () => {
       {interaction === 'going' && (
         <div>
           <span className="check">✔</span>
-          <p>You're going to this event!</p>
+          <p>You´re going to this event!</p>
           <button className="button-link" onClick={handleRemove}>Changed your mind?</button>
         </div>
       )}
       {interaction === 'interested' && (
         <div>
           <span className="check">✔</span>
-          <p>You're interested in going!</p>
+          <p>You´re interested in going!</p>
           <button className="button-link" onClick={handleRemove}>Changed your mind?</button>
         </div>
       )}

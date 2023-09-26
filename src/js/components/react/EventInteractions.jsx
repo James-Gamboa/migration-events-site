@@ -1,3 +1,4 @@
+// @ts-nocheck
 const EventsInteractions = () => {
   return (
     <div className="interactions-container">

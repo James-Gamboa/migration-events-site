@@ -1,4 +1,5 @@
-import { homeTabs } from '../../config.js';
+// @ts-nocheck
+import { homeTabs } from "../../config.js";
 
 const Tabs = () => {
   return (

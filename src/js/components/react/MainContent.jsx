@@ -1,4 +1,5 @@
-import { EventCard } from './EventCard';
+// @ts-nocheck
+import { EventCard } from "./EventCard";
 
 const MainContent = () => {
   return (

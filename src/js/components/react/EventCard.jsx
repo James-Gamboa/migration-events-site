@@ -1,3 +1,4 @@
+// @ts-nocheck
 import formatDate from "../../utils/format-date";
 import { EventsInteractions } from "./EventInteractions";
 

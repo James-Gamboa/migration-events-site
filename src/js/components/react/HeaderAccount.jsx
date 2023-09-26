@@ -1,3 +1,4 @@
+// @ts-nocheck
 const HeaderAccount = () => {
   return (
     <header id="header" className="header">

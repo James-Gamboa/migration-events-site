@@ -1,14 +1,12 @@
 // @ts-nocheck
-import { homeTabs } from "../../config.js";
-
-const Tabs = () => {
+const Tabs = ({ tabs }) => {
   return (
     <div id="tabs" className="header__tabs">
-      {homeTabs.map(({ label, category }) => (
+      {tabs.map(({ label, category }) => (
         <button key={category} data-category={category.toLowerCase()}>{label}</button>
       ))}
     </div>
   );
 };
 
-export {Tabs};
+export { Tabs };

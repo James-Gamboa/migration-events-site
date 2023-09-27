@@ -1,12 +1,18 @@
-// @ts-nocheck
-const Tabs = ({ tabs }) => {
+const Tabs = ({ tabs, selectedCategory, onTabClick }) => {
   return (
     <div id="tabs" className="header__tabs">
       {tabs.map(({ label, category }) => (
-        <button key={category} data-category={category.toLowerCase()}>{label}</button>
+        <button
+          key={category}
+          onClick={() => onTabClick(category)}
+          className={selectedCategory === category ? 'active' : ''}
+        >
+          {label}
+        </button>
       ))}
     </div>
   );
 };
 
-export { Tabs };
+export default Tabs;
+

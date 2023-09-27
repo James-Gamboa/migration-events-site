@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 // @ts-nocheck
 import { createRoot } from "react-dom/client";
 import { Header } from "./components/react/Header";

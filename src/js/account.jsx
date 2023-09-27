@@ -2,8 +2,8 @@
 import { createRoot } from "react-dom/client";
 import { HeaderAccount } from "./components/react/HeaderAccount";
 import { MainContentAccount } from "./components/react/MainContentAccount";
-import { Tabs } from "./components/react/Tabs";
 import { interactionsTabs } from "./config";
+import Tabs from "./components/react/Tabs";
 
 const Account = () => {
   return (

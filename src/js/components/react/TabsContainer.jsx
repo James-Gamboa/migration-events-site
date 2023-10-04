@@ -5,14 +5,10 @@ import MainContent from './MainContent';
 
 const TabsContainer = ({ tabs }) => {
   const [categoryData, setCategoryData] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState('Music');
 
   const handleFetchCategory = (category) => {
-    if (categoryData[category]) {
-      setSelectedCategory(category);
-      return;
-    }
     setLoading(true);
     fetchEventsByCategories(category)
       .then((response) => {
@@ -20,7 +16,6 @@ const TabsContainer = ({ tabs }) => {
           ...prevData,
           [category]: response,
         }));
-        setSelectedCategory(category);
         setLoading(false);
       })
       .catch((error) => {
@@ -30,15 +25,22 @@ const TabsContainer = ({ tabs }) => {
   };
 
   useEffect(() => {
-    handleFetchCategory('Music');
-  }, []);
+    handleFetchCategory(selectedCategory);
+  }, [selectedCategory]);
+
+  const handleTabClick = (category) => {
+    setSelectedCategory(category);
+    if (!categoryData[category]) {
+      handleFetchCategory(category);
+    }
+  };
 
   return (
     <div>
       <Tabs
         tabs={tabs}
         selectedCategory={selectedCategory}
-        onTabClick={handleFetchCategory}
+        onTabClick={handleTabClick}
       />
       {loading ? (
         <p>Loading, please wait</p>
